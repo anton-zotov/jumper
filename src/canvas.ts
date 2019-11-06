@@ -28,6 +28,12 @@ export default class Canvas {
 		this.context.font = "24px Arial";
 		this.context.fillText(`FPS: ${fps}`, this.width - 150, 40);
 	}
+	
+	public drawHint(): void {
+		this.context.fillStyle = '#ccc';
+		this.context.font = "40px Arial";
+		this.context.fillText(`Use arrows to control the jumper`, this.width / 2 - 300, this.height / 2 - 60);
+	}
 
 	private create(config = { width: 1600, height: 900 }): void {
 		this.canvas = document.createElement('canvas');

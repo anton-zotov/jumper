@@ -26,9 +26,10 @@ function drawAll(timestamp: number) {
 	if (keyReleased['ArrowDown']) player.releaseSpring();
 	keyReleased = {};
 	player.move(dt);
+	drawFPS(timestamp);
+	canvas.drawHint();
 	ground.draw();
 	player.draw();
-	drawFPS(timestamp);
 	if (!manual) setTimeout(() => window.requestAnimationFrame(drawAll), 1000 / 60);
 }
 
