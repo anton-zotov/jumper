@@ -2,12 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-	mode: 'development',
 	entry: './src/index.ts',
-	devtool: 'inline-source-map',
-	devServer: {
-		contentBase: './dist'
-	},
 	module: {
 		rules: [
 			{
@@ -29,6 +24,8 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist')
 	},
 	plugins: [
-		new HtmlWebpackPlugin()
+		new HtmlWebpackPlugin({
+			title: 'Jumper'
+		})
 	]
 };
