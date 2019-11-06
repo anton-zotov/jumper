@@ -132,10 +132,7 @@ export default class Jumper {
 		if (this.footIsStanding || this.actions.checkCollision(this.foot.x, this.foot.y)) {
 			if (!this.footIsStanding) {
 				let [noColX, noColY] = this.foot.findPosition((x, y) => !this.actions.checkCollision(x, y));
-				console.log('start', this.foot.x, this.foot.y);
-				console.log('find', noColX, noColY);
 				this.foot.place(noColX, noColY);
-				// console.log('moveBack', this.foot.x, this.foot.y);
 			}
 			this.footIsStanding = true;
 			let springForce = this.springVector.norm().multiplyScalar(this.springRigidity * (this.springLength - this.springMaxLength));
