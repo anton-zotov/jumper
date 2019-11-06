@@ -39,7 +39,7 @@ function drawFPS(timestamp: number) {
 	prevTimestamp = timestamp;
 }
 
-const getDt = (t: number) => (t - prevTimestamp) / 1000;
+const getDt = (t: number) => (t - (prevTimestamp ? prevTimestamp : t)) / 1000;
 
 window.requestAnimationFrame(drawAll);
 
