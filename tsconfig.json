@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"sourceMap": true,
+		"outDir": "./dist/",
+		"module": "es6",
+		"esModuleInterop": true,
+		"target": "esnext",
+		"allowJs": true
+	}
+}
